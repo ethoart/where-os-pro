@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="6dp">
+
+    <!-- Icon background bubble -->
+    <FrameLayout
+        android:id="@+id/iconBg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:contentDescription="App icon" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/appLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="8sp"
+        android:layout_marginTop="3dp" />
+
+</LinearLayout>

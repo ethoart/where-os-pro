@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Wallpaper (subtle, behind everything) -->
+    <ImageView
+        android:id="@+id/wallpaperView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.25"
+        android:contentDescription="Wallpaper" />
+
+    <!-- Clock fills most of screen -->
+    <com.watchlauncher.ProClockView
+        android:id="@+id/clockView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="64dp" />
+
+    <!-- Dock at bottom -->
+    <LinearLayout
+        android:id="@+id/dockContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp" />
+
+    <!-- Swipe hint pill top -->
+    <View
+        android:layout_width="28dp"
+        android:layout_height="3dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="#55FFFFFF" />
+
+</FrameLayout>

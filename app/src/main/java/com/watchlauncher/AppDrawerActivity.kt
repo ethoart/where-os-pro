@@ -91,7 +91,7 @@ class AppDrawerActivity : AppCompatActivity() {
 
     private fun setupSwipeDown() {
         val listener = object : GestureDetector.SimpleOnGestureListener() {
-            override fun onFling(e1: MotionEvent?, e2: MotionEvent?, vX: Float, vY: Float): Boolean {
+            override fun onFling(e1: MotionEvent?, e2: MotionEvent?, velocityX: Float, velocityY: Float): Boolean {
                 val dY = (e2?.y ?: 0f) - (e1?.y ?: 0f)
                 val dX = abs((e1?.x ?: 0f) - (e2?.x ?: 0f))
                 if (dY > 100 && dY > dX) {

@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
         val listener = object : GestureDetector.SimpleOnGestureListener() {
 
             override fun onFling(e1: MotionEvent?, e2: MotionEvent?,
-                                 vX: Float, vY: Float): Boolean {
+                                 velocityX: Float, velocityY: Float): Boolean {
                 val dY = (e1?.y ?: 0f) - (e2?.y ?: 0f)
                 val dX = abs((e1?.x ?: 0f) - (e2?.x ?: 0f))
                 return when {

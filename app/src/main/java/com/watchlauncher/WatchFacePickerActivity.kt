@@ -98,7 +98,7 @@ class WatchFacePickerActivity : AppCompatActivity() {
 
         // Swipe right to dismiss
         val gl = object : GestureDetector.SimpleOnGestureListener() {
-            override fun onFling(e1: MotionEvent?, e2: MotionEvent?, vX: Float, vY: Float): Boolean {
+            override fun onFling(e1: MotionEvent?, e2: MotionEvent?, velocityX: Float, velocityY: Float): Boolean {
                 val dX = (e2?.x ?: 0f) - (e1?.x ?: 0f)
                 if (dX > 100) { finish(); overridePendingTransition(R.anim.fade_in, R.anim.slide_right); return true }
                 return false
